@@ -104,7 +104,7 @@ const router = useRouter();
           </button>
         </div>
         <div className="flex justify-between items-center gap-x-4">
-          {/* {user ? ( */}
+         
             <div className="flex gap-x-4 items-center">
               <Button 
                 onClick={handleLogout} 
@@ -119,7 +119,7 @@ const router = useRouter();
                 <FaUserAlt />
               </Button>
             </div>
-          ) : (
+        
             <>
               <div>
                 <Button 
@@ -142,7 +142,7 @@ const router = useRouter();
                 </Button>
               </div>
             </>
-          {/* )} */}
+         
         </div>
       </div>
       {children}
