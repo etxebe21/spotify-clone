@@ -1,3 +1,4 @@
+/* eslint-disable react/no-children-prop */
 
 import Sidebar from '@/components/Sidebar'
 import './globals.css'
@@ -19,7 +20,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         
-        <Sidebar></Sidebar>
+        <Sidebar children={undefined}></Sidebar>
+        
         {children}
         
       </body>
