@@ -37,6 +37,8 @@ const { user } = useUser();
     router.refresh();
     if (error) {
       toast.error(error.message);
+    } else{
+      toast.success( "Correct log out");
     }
   }
 
