@@ -3,16 +3,15 @@
 import { useEffect, useState } from "react";
 
 import AuthModal from "@/components/AuthModal";
-import SubscribeModal from "@/components/SubscribeModal";
-import UploadModal from "@/components/UploadModal";
+
 import { ProductWithPrice } from "@/types";
 
 interface ModalProviderProps {
-  products: ProductWithPrice[];
+  //products: ProductWithPrice[];
 }
 
 const ModalProvider: React.FC<ModalProviderProps> = ({
-  products
+ // products
 }) => {
   const [isMounted, setIsMounted] = useState(false);
 
@@ -26,9 +25,9 @@ const ModalProvider: React.FC<ModalProviderProps> = ({
 
   return (
     <>
-      <AuthModal />
-      <SubscribeModal products={products} />
-      <UploadModal />
+     <AuthModal />
+      {/* <SubscribeModal products={products} />
+      <UploadModal /> */}
     </>
   );
 }
