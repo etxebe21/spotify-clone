@@ -8,6 +8,8 @@ import { FaUserAlt } from "react-icons/fa";
 import { HiHome } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
 
+import useAuthModal from "@/hooks/useAuthModal";
+
 import Button from "./Button";
 
 interface HeaderProps {
@@ -21,6 +23,7 @@ const Header: React.FC<HeaderProps> = ({
 }) => {
 
 const router = useRouter();
+const authModal = useAuthModal();
 
   const handleLogout = async () => {
    
@@ -123,7 +126,7 @@ const router = useRouter();
             <>
               <div>
                 <Button 
-                  //onClick={authModal.onOpen} 
+                  onClick={authModal.onOpen} 
                   className="
                     bg-transparent 
                     text-neutral-300 
@@ -135,7 +138,7 @@ const router = useRouter();
               </div>
               <div>
                 <Button 
-                  //onClick={authModal.onOpen} 
+                  onClick={authModal.onOpen} 
                   className="bg-white px-6 py-2"
                 >
                   Log in
