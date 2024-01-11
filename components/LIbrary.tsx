@@ -1,19 +1,24 @@
 "use client";
 import { TbPlaylist } from "react-icons/tb";
 import { AiOutlinePlus } from "react-icons/ai";
-
+import useAuthModal from "@/hooks/useAuthModal";
+import { useUser } from "@/hooks/useUser";
 const Library = () => {
    
-   
-  
-    const onClick = () => {
-      {
-        
-      }
-  
-      
+  const authModal = useAuthModal();
+  const { user, subscription } = useUser();
+
+  const onClick = () => {
+    if (!user) {
+      return authModal.onOpen();
     }
-  
+
+    if (!subscription) {
+      //return subscribeModal.onOpen();
+    }
+
+    //return uploadModal.onOpen();
+  }
     return ( 
       <div className="flex flex-col">
         <div className="flex items-center justify-between px-5 pt-4">
