@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-//import useLoadImage from "@/hooks/useLoadImage";
+import useLoadImage from "@/hooks/useLoadImage";
 import { Song } from "@/types";
 
 //import PlayButton from "./PlayButton";
@@ -16,7 +16,7 @@ const SongItem: React.FC<SongItemProps> = ({
   data,
   onClick
 }) => {
-  //const imagePath = useLoadImage(data);
+  const imagePath = useLoadImage(data);
 
   return ( 
     <div
@@ -48,12 +48,12 @@ const SongItem: React.FC<SongItemProps> = ({
           overflow-hidden
         "
       >
-        {/* <Image
+        <Image
           className="object-cover"
           src={imagePath || '/images/music-placeholder.png'}
           fill
           alt="Image"
-        /> */}
+        />
       </div>
       <div className="flex flex-col items-start w-full pt-4 gap-y-1">
         <p className="font-semibold truncate w-full">
