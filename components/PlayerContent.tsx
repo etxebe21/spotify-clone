@@ -11,6 +11,7 @@ import usePlayer from "@/hooks/usePLayer";
 
 import LikeButton from "./LIkeButton";
 import MediaItem from "./MediaItem";
+import Slider from "./Slider";
 
 
 
@@ -192,10 +193,10 @@ const PlayerContent: React.FC<PlayerContentProps> = ({
               className="cursor-pointer" 
               size={34} 
             />
-            {/* <Slider 
+            <Slider 
               value={volume} 
               onChange={(value) => setVolume(value)}
-            /> */}
+            />
           </div>
         </div>
 

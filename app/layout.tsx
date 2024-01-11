@@ -1,13 +1,12 @@
 import { Figtree } from 'next/font/google'
 
 import getSongsByUserId from '@/actions/getSongsByUserId'
-import Player from '@/components/Player'
 import Sidebar from '@/components/Sidebar'
-
+import ToasterProvider from '@/providers/ToastProvider'
 import UserProvider from '@/providers/UserProvider'
 import ModalProvider from '@/providers/ModalProvider'
 import SupabaseProvider from '@/providers/SupabaseProvider'
-
+import Player from '@/components/Player'
 
 import './globals.css'
 
@@ -31,7 +30,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        
+        <ToasterProvider />
         <SupabaseProvider>
           <UserProvider>
             <ModalProvider  />
